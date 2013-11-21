@@ -1,1 +1,1 @@
-rvm --create 1.9.2@stringcalculator
+rvm --create 2.0@stringcalculator
