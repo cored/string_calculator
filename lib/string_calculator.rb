@@ -1,5 +1,7 @@
 require "string_calculator/version"
 
 module StringCalculator
-  # Your code goes here...
+  def add 
+    0
+  end
 end
