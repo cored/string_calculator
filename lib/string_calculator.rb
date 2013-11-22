@@ -3,10 +3,14 @@ require "string_calculator/version"
 module StringCalculator
   def add 
     return 0 if empty?
-    Numbers.new(self, Delimiter.for(self)).sum
+    Numbers[self, Delimiter.for(self)].sum
   end
 
   class Numbers 
+    class << self 
+      alias :[] :new
+    end
+
     def initialize(nums, delimiter)
       @delimiter = delimiter
       @values = nums.split(delimiter).map(&:to_i)
